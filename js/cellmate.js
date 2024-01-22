@@ -21,8 +21,12 @@ const generator = () => {
 
     let colors = ['_', 'red', 'green', 'blue']
     let numShapes = parseInt(document.getElementById('generator-num-of-shapes').value)
-    console.log(numShapes)
 
+    // Width and height
+    // TODO: allow width and height of each shape to be randomized as well
+    let shapeWidth = parseInt(document.getElementById('generator-width-of-shapes').value)
+    let shapeHeight = parseInt(document.getElementById('generator-height-of-shapes').value)
+    
     for (let i = 0; i < numShapes; i++) {
         // random color
         ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)]
@@ -33,8 +37,8 @@ const generator = () => {
         ctx.fillRect(
             cellmate.randomXCoord(),
             cellmate.randomYCoord(),
-            settings.cellWidth,
-            settings.cellHeight)
+            shapeWidth || settings.cellWidth,
+            shapeHeight || settings.cellHeight)
     }
 }
 
