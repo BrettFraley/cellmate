@@ -16,7 +16,7 @@ const generator = () => {
     
     // Clear / Reset canvas
     // TODO: make "if reset true setting"
-    ctx.fillStyle = '#fff'
+    ctx.fillStyle = generatorBackgroundColorInput.value
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
     let chosenColors = getChosenColors()
@@ -54,19 +54,43 @@ generateButton.addEventListener('click', () => {
 }, false)
 
 // Add color to colors list that gets randomly chosen from in the generator feature.
+// TODO: wrap all element vars, etc  in an init function
+let generatorBackgroundColorInput = document.getElementById('generator-background-color-input')
+let generatorBackgroundColorRandomButton = document.getElementById('generator-background-color-random-button')
+
 let generatorColorInput = document.getElementById('generator-color-input')
-let generatorAddColorButton = document.getElementById('generator-add-color-button')
+let generatorAddRandomColorButton = document.getElementById('generator-add-random-color-button')
 let generatorColorsList = document.getElementById('generator-added-colors')
 
-generatorAddColorButton.addEventListener('click', () => {
-    let color = generatorColorInput.value
+generatorBackgroundColorInput.value = '#ffffff'
+generatorColorInput.value = '#ffffff'
 
+const appendToColorsList = color => {
     let span = document.createElement('span')
     span.className = 'colors-list-span'
     span.style.color = color
     span.innerHTML = color
     generatorColorsList.appendChild(span)
+}
 
+// Add random background button
+generatorBackgroundColorRandomButton.addEventListener('click', () => {
+    let color = generateRandomHexColor()
+    generatorBackgroundColorInput.value = color
+}, false)
+
+// Add random Color button
+generatorAddRandomColorButton.addEventListener('click', () => {
+    let color = generateRandomHexColor()
+    generatorColorInput.value = color
+    appendToColorsList(color)
+
+}, false)
+
+// Add color from color input
+generatorColorInput.addEventListener('change', el => {
+    let color = generatorColorInput.value
+    appendToColorsList(color)
 }, false)
 
 // Parse the 'colors-list-span' elements to get current list of chosen colors,
@@ -80,4 +104,19 @@ const getChosenColors = () => {
     }
 
     return hexColors
+}
+
+// Utility Functions
+
+const generateRandomHexColor = () => {
+    // Generate a random number between 0 and 16777215 (0xFFFFFF in decimal)
+    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    
+    // Pad the color code with zeros if needed
+    while (randomColor.length < 6) {
+        randomColor = '0' + randomColor;
+    }
+    
+    // Add '#' to the beginning of the color code
+    return '#' + randomColor;
 }

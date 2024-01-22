@@ -16,7 +16,7 @@
     <div class="container p-5 header">
         <div class="row">
             <div class="col-6 mr-auto ml-auto">
-                <h1>CellMate</h1>
+                <h1 id="logo">CellMate</h1>
                 <h2>Playground, Tools, & Experiments In Cellular Automata</h2>
             </div>
         </div>
@@ -37,7 +37,7 @@
                         is randomized between 0 - 1.
                     </p>
 
-                    <button class="btn btn-secondary" id="generate-button">G E N E R A T E</button>
+                    <button class="btn btn-outline-secondary mb-1" id="generate-button">G E N E R A T E</button>
 
                     <div class="row">
                         
@@ -52,17 +52,21 @@
                             <input id="generator-height-of-shapes" type="number" placeholder="5" value="5">
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-6 color-control-section">
+                            <p>
+                                <label for="background-color">Background</label>
+                                <input id="generator-background-color-input" type="color" value="#ffffff">
+                                <button id="generator-background-color-random-button" class="btn btn-sm btn-outline-secondary">Random</button>
+                            </p>
+
                             <label for="colors">Colors</label>
                             <input id="generator-color-input" type="color">
-                            <button id="generator-add-color-button" class="btn btn-sm btn-outline-secondary">Add Color</button>
+                            <button id="generator-add-random-color-button" class=" btn btn-sm btn-outline-secondary">Random</button>
 
                             <div id="generator-added-colors"></div>
                         </div>
 
-                        
-                    </div>
-                    
+                    </div> <!-- End Row -->
                     <hr>
             </div>
 
