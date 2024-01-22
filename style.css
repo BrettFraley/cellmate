@@ -1,0 +1,21 @@
+@import url('./array-font.css');
+
+@font-face {
+  font-family: 'Array-Regular';
+  font-family: 'Array-SemiboldWide';
+  font-family: 'Array-BoldWide';
+}
+
+h1 {
+    font-family: Array-BoldWide;
+}
+
+h2 {
+    font-family: Array-Regular;
+}
+
+#cellmate-canvas {
+    width: 100%;
+    height: 50vh;
+    border: dashed 3px #333;
+}

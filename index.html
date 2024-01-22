@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="array-font.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>CellMate</title>
+  </head>
+  <body>
+    <div class="container p-5 header">
+        <div class="row">
+            <div class="col-6 mr-auto ml-auto">
+                <h1>CellMate</h1>
+                <h2>Playground, Tools, & Experiments In Cellular Automata</h2>
+            </div>
+        </div>
+    <hr>
+
+        <div class="row">
+            <div class="col-6">
+                <canvas id="cellmate-canvas"></canvas>
+            </div>
+
+            <div class="col-6">
+                <div id="cellmate-settings">
+                    <p>Controls</p>
+                </div>
+            </div>
+
+            <div id="cellmate-stats">
+                <p>Stats</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script defer src="js/cellmate.js"></script>
+  </body>
+</html>
