@@ -23,14 +23,25 @@
     <hr>
 
         <div class="row">
-            <div class="col-6">
+            <div class="col-6" id="cellmate-canvas-wrapper">
                 <canvas id="cellmate-canvas"></canvas>
             </div>
 
             <div class="col-6">
-                <div id="cellmate-settings">
+                <div id="cellmate-controls">
                     <p>Controls</p>
-                </div>
+                
+                    <h3>Generative Art</h3>
+                    <p>Generate N amount of shapes at random x, y coordinates. Default shape is rectangle, 
+                        default width and height is 10px, default colors are red, green, blue, and opacity 
+                        is randomized between 0 - 1.
+                    </p>
+
+                    <button id="generate-button"> G E N E R A T E</button>
+                    <label for="shape-count">How many shapes?</label>
+                    <input id = "generator-num-of-shapes" type="number" name="shape-count">
+
+                    <hr>
             </div>
 
             <div id="cellmate-stats">

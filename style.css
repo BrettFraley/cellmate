@@ -6,6 +6,10 @@
   font-family: 'Array-BoldWide';
 }
 
+body {
+    background-color: darkseagreen;
+}
+
 h1 {
     font-family: Array-BoldWide;
 }
@@ -14,8 +18,15 @@ h2 {
     font-family: Array-Regular;
 }
 
+#cellmate-canvas-wrapper {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
 #cellmate-canvas {
     width: 100%;
     height: 50vh;
     border: dashed 3px #333;
+    background-color: #fff;
 }
