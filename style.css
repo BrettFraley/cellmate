@@ -45,11 +45,13 @@ h2 {
     border-radius: 10px;
     padding: 10px;
     min-height: 25px;
+    max-height: 175px;
+    overflow-y: scroll;
 }
 
 .colors-list-span {
     background-color: #fff;
-    margin: 3px;
+    margin: 5px;
     padding: 5px;
     border: #333;
     border-radius: 10px;
@@ -59,6 +61,7 @@ h2 {
 #logo {
     padding: 5px;
     border-radius: 10px;
+    text-shadow: 1px 1px 2px #4ff802, 0 0 1em #151515, 0 0 0.2em #080708;
 }
 
 .generator-control-btn {
@@ -80,3 +83,10 @@ h2 {
     background-color: #072b4b;
     border-color: #fff; /*set the color you want here*/
 }
+
+
+/*
+text-shadow: 1px 1px 2px #4ff802, 0 0 1em blue, 0 0 0.2em #5252a1;
+
+text-shadow: 1px 1px 2px #4ff802, 0 0 1em #151515, 0 0 0.2em #080708;
+*/
