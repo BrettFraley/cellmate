@@ -30,3 +30,19 @@ h2 {
     border: dashed 3px #333;
     background-color: #fff;
 }
+
+#generator-added-colors {
+    border: solid 1px #333;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 25px;
+}
+
+.colors-list-span {
+    background-color: #fff;
+    margin: 3px;
+    padding: 5px;
+    border: #333;
+    border-radius: 10px;
+    display: inline-block;
+}

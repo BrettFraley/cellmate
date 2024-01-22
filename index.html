@@ -37,7 +37,10 @@
                         is randomized between 0 - 1.
                     </p>
 
+                    <button class="btn btn-secondary" id="generate-button">G E N E R A T E</button>
+
                     <div class="row">
+                        
                         <div class="col-6">
                             <label for="shape-count">How many shapes?</label>
                             <input id = "generator-num-of-shapes" type="number" placeholder="42" value="42">
@@ -50,8 +53,14 @@
                         </div>
 
                         <div class="col-6">
-                            <button class="btn btn-secondary" id="generate-button"> G E N E R A T E</button>
+                            <label for="colors">Colors</label>
+                            <input id="generator-color-input" type="color">
+                            <button id="generator-add-color-button" class="btn btn-sm btn-outline-secondary">Add Color</button>
+
+                            <div id="generator-added-colors"></div>
                         </div>
+
+                        
                     </div>
                     
                     <hr>
