@@ -22,6 +22,11 @@ h2 {
     background-color: #fff;
     padding: 15px;
     border-radius: 10px;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 700px;
+    max-height: 700px;
+    height: 54vh;
 }
 
 #cellmate-canvas {
@@ -29,6 +34,8 @@ h2 {
     height: 50vh;
     min-width: 300px;
     min-height: 300px;
+    max-width: 700px;
+    max-height: 700px;
     border: dashed 3px #333;
     background-color: #fff;
 }

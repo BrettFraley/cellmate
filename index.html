@@ -19,8 +19,9 @@
                 <h1 id="logo">CellMate</h1>
                 <h2>Playground, Tools, & Experiments In Cellular Automata</h2>
             </div>
+
+            <hr>
         </div>
-    <hr>
 
         <div class="row">
             <div class="col-6" id="cellmate-canvas-wrapper">
@@ -29,7 +30,6 @@
 
             <div class="col-6">
                 <div id="cellmate-controls">
-                    <p>Controls</p>
                 
                     <h3>Generative Art</h3>
                     <p>Generate N amount of shapes at random x, y coordinates. Default shape is rectangle, 
@@ -59,21 +59,25 @@
                                 <button id="generator-background-color-random-button" class="btn btn-sm btn-outline-secondary">Random</button>
                             </p>
 
-                            <label for="colors">Colors</label>
-                            <input id="generator-color-input" type="color">
-                            <button id="generator-add-random-color-button" class=" btn btn-sm btn-outline-secondary">Random</button>
+                            <p>
+                                <label for="colors">Colors</label>
+                                <input id="generator-color-input" type="color">
+                                <button id="generator-add-random-color-button" class=" btn btn-sm btn-outline-secondary">Random</button>
+                            </p>
 
+                        </div>
+                    </div> <!-- End Row -->
+
+                    <div class="row">
+                        <div class="col-12 ml-auto mr-auto">
                             <div id="generator-added-colors"></div>
                         </div>
+                    </div>
 
-                    </div> <!-- End Row -->
-                    <hr>
-            </div>
+                </div> <!-- end cellmate-controls -->
+            </div> <!-- end right col -->
 
-            <div id="cellmate-stats">
-                <p>Stats</p>
-            </div>
-        </div>
+        </div> <!-- end main row -->
 
     </div>
 
